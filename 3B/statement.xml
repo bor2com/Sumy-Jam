@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+        package="ru.ejudge.sample_contest"
+        id="3B"
+        type="standard">
+  <statement language="ru_RU">
+    <title>Точка на прямой?</title>
+    <description>
+<p>Определите лежит ли точка <b>P</b> на прямой, которая проходит через точки <b>A</b> и <b>B</b>.
+Гарантируется, что точки <b>A</b> и <b>B</b> не совпадают.</p>
+</description>
+    <input_format><p>Вход состоит из двух строк. На первой строке записаны координаты точки <b>P</b>.
+	На второй координаты точек <b>A</b> и <b>B</b>. Все числа целые, разделены пробелами и по модулю не превышают 100.
+</p>
+</input_format>
+    <output_format><p>В единой строке выведите <i>YES</i> если точка лежит на прямой и <i>NO</i> иначе.</p>
+	</output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>0 0
+-1 -1 1 1
+</input>
+      <output>YES</output>
+    </example>
+<example>
+<input>1 0
+-1 -1 1 1
+</input>
+<output>NO</output>
+</example>
+  </examples>
+</problem>
