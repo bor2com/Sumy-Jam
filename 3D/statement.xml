@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest"
+        id="3D"
+        type="standard">
+  <statement language="ru_RU">
+    <title>Расстояние до прямой</title>
+    <description>
+<p>Посчитайте расстояние от точки <b>P</b> до прямой заданной точками <b>A</b> и <b>B</b>.
+Гарантируется, что точки <b>A</b> и <b>B</b> не совпадают.</p>
+</description>
+    <input_format><p>Вход состоит из двух строк. На первой строке записаны координаты точки <b>P</b>.
+	На второй координаты точек <b>A</b> и <b>B</b>. Все числа целые, разделены пробелами и по модулю не превышают 100.
+</p>
+</input_format>
+    <output_format><p>В единой строке выведите действительное число, ответ на задачу, с не менее чем 4-мя цифрами после запятой (можно больше).</p>
+	</output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>0 3
+0 0 1 0</input>
+      <output>3.0000</output>
+    </example>
+	<example>
+		<input>-1 -1
+0 0 1 0
+		</input>
+		<output>1.0000</output>
+	</example>
+	<example>
+		<input>0 1
+2 1 0 -1
+		</input>
+		<output>1.4142</output>
+	</example>
+  </examples>
+</problem>
