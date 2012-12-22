@@ -75,7 +75,7 @@ int main() {
   pt p = read(), a, b;
   a = read();
   b = read();
-  pt ab = b - a, ap = p - a;
-  puts(cross(ab, ap) == 0 && dot(ab, ap) <= 0 ? "YES" : "NO");
+  pt pa = a - p, pb = b - p;
+  puts(cross(pa, pb) == 0 && dot(pa, pb) <= 0 ? "YES" : "NO");
   return 0;
 }
