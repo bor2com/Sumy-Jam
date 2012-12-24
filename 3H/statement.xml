@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="3H" type="standard">
+  <statement language="ru_RU">
+    <title>Пересечение прямоугольников</title>
+    <description>
+      <p>Пока Боря составлял задачу про выпуклую оболочку, на интерактивной доске осталась мелкая сетка без надписей. К доске подошла Даша и в понравившемся месте закрасила прямоугольник красным цветом. Потом подошёл Дима и закрасил прямоугольник синего цвета. Клетки, которые были закрашены и синим и красным цветом, стали зелёными. Посчитайте количество зелёных клеток на доске.</p>
+    </description>
+    <input_format>
+      <p>Входные данные состоят из двух строк. В первой строке описывается Дашин прямоугольник, а во второй Димин. В каждой строке записаны четыре целых числа - координаты двух противоположных углов прямоугольника <b>X<sub>i</sub></b>, <b>Y<sub>i</sub></b>, <b>X<sub>j</sub></b> и <b>Y<sub>j</sub></b> (-10<sup>9</sup>&lt;<b>X<sub>i</sub></b>, <b>Y<sub>i</sub></b>, <b>X<sub>j</sub></b>, <b>Y<sub>j</sub></b>&lt;10<sup>9</sup>).</p>
+    </input_format>
+    <output_format>
+      <p>Выведите количество зелёных клеток на доске.</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+TODO
+      </input>
+      <output>TODO</output>
+    </example>
+    <example>
+      <input>
+TODO
+      </input>
+      <output>TODO</output>
+    </example>
+  </examples>
+</problem>
