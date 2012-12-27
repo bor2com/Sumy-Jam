@@ -12,6 +12,14 @@
     <output_format>
       <p>Выведите два действительных числа - координаты точки на зеркале, в которой Стас увидит отражение Максима и наоборот, не менее чем с четырьмя знаками после запятой (можно больше). В этой точке угол отражения равен углу падения.</p>
     </output_format>
+    <notes>
+      <p>
+        Дополнительные задачи:
+        <ul>
+          <li><a href="http://codeforces.ru/problemset/problem/32/E">CodeForces - Прятки</a></li>
+        </ul>
+      </p>
+    </notes>
   </statement>
   <examples>
     <example>
@@ -23,13 +31,13 @@
       </input>
       <output>0 0</output>
     </example>
-	<example>
+  <example>
       <input>
 0 0
 5 0
 0 2
 2 3
-	  </input>
+    </input>
       <output>0.430769 2.215385</output>
     </example>
   </examples>
