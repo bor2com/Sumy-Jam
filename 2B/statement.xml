@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+        package="ru.ejudge.sample_contest"
+        id="2B"
+        type="standard">
+  <statement language="ru_RU">
+    <title>Очередь</title>
+    <description>
+<p>Вам нужно смоделировать работу очереди.</p>
+<p>
+Очередь должна поддерживать две операции:<br/>
+* <i>push</i> <b>M</b> - вставляет число <b>M</b> (0&le;M&le;10<sup>6</sup>) в конец 
+очереди;<br/>
+* <i>front</i> - выписывает число с начала очереди и удаляет его.<br/>
+</p>
+</description>
+    <input_format><p>Напишите программу, которая на вход получает число <b>N</b> - количество операций (1&le;N&le; 10<sup>5</sup>). А затем читает <b>N</b> строк с командами и выполняет их.</p>
+</input_format>
+    <output_format><p>На каждую операцию <i>front</i> выведите <i>empty</i> если очередь 
+пуста, 
+иначе 
+выпишите число с начала очереди.</p>
+</output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>6
+push 1
+push 2
+push 3
+front
+front
+front
+</input>
+      <output>1
+2
+3
+</output>
+    </example>
+    <example>
+      <input>7
+front
+push 1
+push 2
+front
+front
+push 3
+front
+</input>
+      <output>empty
+1
+2
+3
+</output>
+    </example>
+  </examples>
+</problem>
