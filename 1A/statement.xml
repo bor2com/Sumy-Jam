@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="1A" type="standard">
+  <statement language="ru_RU">
+    <title>Смежные вершины</title>
+    <description><p>Задан неориентированный, несвязный граф без петель и кратных рёбер. Для каждой вершины посчитайте количество её соседей.</p></description>
+    <input_format><p>В первой строке два числа <b>N</b> (1&le;N&le;10<sup>5</sup>) и <b>M</b> (0&le;M&le;10<sup>5</sup>) - количество вершин и рёбер.</p></input_format>
+    <output_format><p>Выведите <b>N</b> строк на каждую вершину. В <b>i</b>-той строке должно быть записано количество соседей вершины <b>i</b>.</p></output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+2 1
+1 2
+      </input>
+      <output>
+1
+1
+      </output>
+    </example>
+    <example>
+      <input>
+5 4
+3 4
+1 2
+1 3
+5 3
+      </input>
+      <output>
+2
+1
+3
+1
+1
+      </output>
+    </example>
+  </examples>
+</problem>

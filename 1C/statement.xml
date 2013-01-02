@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="1C" type="standard">
+  <statement language="ru_RU">
+    <title>Треугольники</title>
+    <description><p>Задан неориентированный, полный граф. У него <b>N</b> вершин и между любыми двумя вершинами есть ребро. Таким образом в этом графе <b>(N * (N - 1)) / 2</b> рёбер. Вам заданы рёбра, которые покрашены в чёрный цвет, все остальные покрашены в белый цвет. Посчитайте количество треугольников одного цвета в графе.</p></description>
+    <input_format><p>В первой строке два числа <b>N</b> (1&le;N&le;10<sup>5</sup>) и <b>M</b> (0&le;M&le;10<sup>5</sup>) - количество вершин и количество чёрных рёбер.</p></input_format>
+    <output_format><p>Выведите одно число - количество треугольников одинакового цвета в графе.</p></output_format>
+    <notes>Треугольником одного цвета назыается тройка различных вершин <b>A</b>, <b>B</b> и <b>C</b> таких, что рёбра <b>A - B</b>, <b>A - C</b> и <b>B - C</b> покрашены в один цвет. Порядок вершин не важен, тоесть тройки { 1, 2, 3 } и { 3, 1, 2 } одинаковые и считаются один раз.</notes>
+  </statement>
+  <examples>
+    <example>
+      <input>
+3 3
+1 2
+2 3
+3 1
+      </input>
+      <output>1</output>
+    </example>
+    <example>
+      <input>4 0</input>
+      <output>4</output>
+    </example>
+  </examples>
+</problem>
