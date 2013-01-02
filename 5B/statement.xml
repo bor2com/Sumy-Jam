@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="5B" type="standard">
+  <statement language="ru_RU">
+    <title>Общая подпоследовательность</title>
+    <description>
+      <p>Найдите длиннейшую общую подпоследовательность.</p>
+    </description>
+    <input_format>
+      <p>Вход состоит из двух рядков. В каждом рядке записана строка из больших и маленьких латинских букв ('a' - 'z', 'A' - 'Z') и цифр. Длинна каждой строки не превышает 500 символов.</p>
+    </input_format>
+    <output_format>
+      <p>Выведите наибольшую общую подпоследовательность обоих строк. Если вариантов несколько то выводите любой.</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+235
+346
+      </input>
+      <output>3</output>
+    </example>
+    <example>
+      <input>
+fear
+leather
+      </input>
+      <output>ear</output>
+    </example>
+    <example>
+      <input>
+no
+match
+      </input>
+      <output></output>
+    </example>
+  </examples>
+</problem>
