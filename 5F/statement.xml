@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="5F" type="standard">
+  <statement language="ru_RU">
+    <title>Задача рюкзака</title>
+    <description>
+      <p>Представьте, что собираясь в поход вы стоите перед выбором предметов, которые поместяться в рюкзак и будут полезны в дороге. Пусть каждый из таких предметов имеет вес <b>W<sub>i</sub></b> кг и ценность <b>C<sub>i</sub></b>, а рюкзак может вместить не более <b>T</b> кг. Определите какие предметы нужно взять, чтобы они все поместились в рюкзак, а их суммарная ценность была максимальной.</p>
+    </description>
+    <input_format>
+      <p>Первая строка содержит целые числа <b>N</b> и <b>T</b> - количество предметов и вместительность рюкзака (0&le;<b>N</b>&le;100; 0&le;<b>T</b>&le;10<sup>4</sup>).</p>
+      <p>На второй строке записаны <b>N</b> натуральных чисел <b>W<sub>i</sub></b> - вес каждого предмета (1&le;<b>W<sub>i</sub></b>&le;100).</p>
+      <p>На третьей строке записаны <b>N</b> целых чисел <b>C<sub>i</sub></b> - ценность предметов (0&le;<b>C<sub>i</sub></b>&le;10<sup>9</sup>).</p>
+    </input_format>
+    <output_format>
+      <p>Выведите одно число - максимальная суммарная ценность предметов, которые поместяться в рюкзак..</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+3 4
+2 3 2
+1 5 2
+      </input>
+      <output>5</output>
+    </example>
+    <example>
+      <input>
+4 2
+1 1 1 1
+2 8 20 1
+      </input>
+      <output>28</output>
+    </example>
+  </examples>
+</problem>

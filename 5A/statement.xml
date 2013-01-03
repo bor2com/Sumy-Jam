@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="5A" type="standard">
+  <statement language="ru_RU">
+    <title>Сумма на отрезке</title>
+    <description>
+      <p>Напишите программу, которая будет быстро считать сумму на отрезке массива.</p>
+    </description>
+    <input_format>
+      <p>Первая строка содержит два числа <b>N</b> и <b>Q</b> (1&le;<b>N</b>,<b>Q</b>&le;10<sup>5</sup>)</p>
+      <p>На второй строке записан массив <b>M</b> из <b>N</b> целых чисел (-10<sup>9</sup>&le;<b>M<sub>i</sub></b>&le;10<sup>9</sup>).</p>
+      <p>Затем идут <b>Q</b> строк по два числа <b>L<sub>j</sub></b> и <b>R<sub>j</sub></b>, которые задают левую и правую границу запроса (1&le;<b>L<sub>j</sub></b>&le;<b>R<sub>j</sub></b>&le;<b>N</b>).</p>
+    </input_format>
+    <output_format>
+      <p>Для каждого запроса посчитайте и выведите сумму элементов <b>M<sub>L<sub>j</sub></sub></b>+<b>M<sub>L<sub>j</sub>+1</sub></b>+...+<b>M<sub>R<sub>j</sub>-1</sub></b>+<b>M<sub>R<sub>j</sub></sub></b>.</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+5 3
+1 2 3 4 5
+3 4
+2 2
+1 5
+      </input>
+      <output>
+7
+2
+15
+      </output>
+    </example>
+  </examples>
+</problem>
