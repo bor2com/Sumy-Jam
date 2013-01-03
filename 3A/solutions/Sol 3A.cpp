@@ -25,7 +25,7 @@ int main() {
   for (i = 0; i < N; ++i) {
     scanf("%d%d", &pts[i].x, &pts[i].y);
   }
-  i64 css = abs(cross(pts[1] - pts[0], pts[2] - pts[0]));
+  i64 css = llabs(cross(pts[1] - pts[0], pts[2] - pts[0]));
   printf("%lld.%lld\n", css / 2, (css % 2) * 5);
   return 0;
 }

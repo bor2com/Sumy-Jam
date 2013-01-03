@@ -2,32 +2,85 @@ using System;
 using System.IO;
 using System.Text;
 
-public sealed class Program {
+public class Program {
 
-    const Int32 N = 100, maxCost = (Int32)1e9;
+    const Int32 N = 500;
 
-    static readonly Random rnd = new Random();
+    #region Generators
 
-    delegate Int32 GenNum();
+    static Random rnd = new Random();
 
-    void Generate(GenNum g, Int32 n) {
-        for (Int32 i = 0; i < n; Console.Write(++i == n ? Environment.NewLine : " ")) {
-            Console.Write(g());
+    static Char GetCharacter() {
+        Int32 n = rnd.Next(26 * 2 + 10);
+        if (n < 26) {
+            return (Char)(n + 'a');
+        } else if ((n -= 26) < 26) {
+            return (Char)(n + 'A');
+        } else {
+            return (Char)((n -= 26) | 0x30);
         }
     }
 
+    static String GetBlock(Int32 length) {
+        return new String(GetCharacter(), rnd.Next(length) + 1);
+    }
+
+    static String GetString(Int32 length) {
+        Int32 i;
+        Char[] result = new Char[length];
+        for (i = 0; i < length; ++i) {
+            result[i] = GetCharacter();
+        }
+        return new String(result);
+    }
+
+    static String GetShrapnel(Int32 parts) {
+        StringBuilder sb = new StringBuilder();
+        for (Int32 i = 0, stock = N, a; i < parts; ++i) {
+            stock -= a = rnd.Next(stock);
+            sb.Append(GetBlock(a));
+        }
+        return sb.ToString();
+    }
+
+    #endregion
+
+    void Fourth() {
+        String s = new String('x', N);
+        Console.WriteLine(s);
+        Console.WriteLine(s);
+    }
+
+    void Fifth() {
+        String a = new String('a', N / 2);
+        String b = new String('b', N / 2);
+        Console.WriteLine(a + b);
+        Console.WriteLine(b + a);
+    }
+
+    void Sixth() {
+        Console.WriteLine(GetString(N - rnd.Next(400)));
+        Console.WriteLine(GetString(N - rnd.Next(100)));
+    }
+
     void Seventh() {
-        Int32 n = rnd.Next(N) + 1, w = rnd.Next(N * N) + 1, i;
-        Console.WriteLine("{0} {1}", n, w);
-        Generate(() => rnd.Next(100) + 1, n);
-        Generate(() => rnd.Next(maxCost) + 1, n);
+        Console.WriteLine(GetString(N - rnd.Next(100)));
+        Console.WriteLine(GetString(N - rnd.Next(400)));
     }
 
     void Eighth() {
-        Int32 n = N - rnd.Next(5), w = N * N - rnd.Next(10), i;
-        Console.WriteLine("{0} {1}", n, w);
-        Generate(() => rnd.Next(100) + 1, n);
-        Generate(() => maxCost - rnd.Next(1000), n);
+        Console.WriteLine(GetShrapnel(5));
+        Console.WriteLine(GetShrapnel(10));
+    }
+
+    void Nineth() {
+        Console.WriteLine(GetShrapnel(100));
+        Console.WriteLine(GetShrapnel(3));
+    }
+
+    void Tenth() {
+        Console.WriteLine(GetString(N - rnd.Next(10)));
+        Console.WriteLine(GetString(N - rnd.Next(10)));
     }
 
     public Program() {

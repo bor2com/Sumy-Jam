@@ -52,27 +52,50 @@ int _in;int in(){scanf("%d",&_in);return _in;}
 
 // stuff cutline
 
-const int N = 102;
+const int N = 502;
 
-i64 dp[N][N * N];
+int dp[N][N], trace[N][N];
 
-int w[N], c[N];
+char one[N], two[N];
+
+/* Trace:
+ * 0 - up
+ * 1 - left
+ * 2 - diag
+ */
 
 int main() {
-  int n, cap, i, j;
-  C(dp, -1);
-  dp[0][0] = 0;
-  scanf("%d%d", &n, &cap);
-  generate(w, w + n, in);
-  generate(c, c + n, in);
-  FOR (i, n) {
-    FOR (j, cap + 1) {
-      if (dp[i][j] >= 0) {
-        remax(dp[i + 1][j], dp[i][j]);
-        remax(dp[i + 1][j + w[i]], dp[i][j] + c[i]);
+  int i, j, n, m;
+  C(dp, 0);
+  C(trace, 0);
+  n = strlen(gets(one));
+  m = strlen(gets(two));
+  FORE (i, 1, n) {
+    FORE (j, 1, m) {
+      dp[i][j] = dp[i - 1][j];
+      trace[i][j] = remax(dp[i][j], dp[i][j - 1]);
+      if (one[i - 1] == two[j - 1] && remax(dp[i][j], dp[i - 1][j - 1] + 1)) {
+        trace[i][j] = 2;
       }
     }
   }
-  printf(I64 "\n", *max_element(dp[n], dp[n] + cap + 1));
+  stack<char> rev;
+  for (i = n, j = m; dp[i][j] != 0; ) {
+    switch (trace[i][j]) {
+    case 2 :
+      rev.push(one[--i]);
+    case 1 :
+      --j;
+      break;
+    case 0 :
+      --i;
+      break;
+    }
+  }
+  while (!rev.empty()) {
+    putchar(rev.top());
+    rev.pop();
+  }
+  putchar('\n');
   return 0;
 }
