@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="5A" type="standard">
+  <statement language="ru_RU">
+    <title>Сумма на прямоугольнике</title>
+    <description>
+      <p>Напишите программу, которая будет быстро считать сумму на прямоугольной области таблицы <b>T</b>.</p>
+    </description>
+    <input_format>
+      <p>Первая строка содержит два натуральных числа <b>R</b> и <b>C</b> - количество строк и столбцов таблицы (1&le;<b>R</b>,<b>C</b>&le;500).</p>
+      <p>В следующих <b>R</b> строках записано по <b>C</b> целых чисел - элементы таблицы <b>T</b> (-10<sup>9</sup>&le;<b>T<sub>i,j</sub></b>&le;10<sup>9</sup>).</p>
+      <p>После этого идёт строка с целым числом <b>Q</b> - количеством запросов (0&le;<b>Q</b>&le;10<sup>5</sup>).</p>
+      <p>Затем идут <b>Q</b> строк по четыре числа <b>i<sub>1</sub></b>, <b>j<sub>1</sub></b>, <b>i<sub>2</sub></b> и <b>j<sub>2</sub></b> которые задают прямоугольную область таблицы (1&le;<b>i<sub>1</sub></b>&le;<b>i<sub>2</sub></b>&le;<b>R</b>; 1&le;<b>j<sub>1</sub></b>&le;<b>j<sub>2</sub></b>&le;<b>C</b>).</p>
+    </input_format>
+    <output_format>
+      <p>Для каждого запроса посчитайте и выведите сумму элементов <b>T<sub>i,j</sub></b> для которых <b>i<sub>1</sub></b>&le;<b>i</b>&le;<b>i<sub>2</sub></b> и <b>j<sub>1</sub></b>&le;<b>j</b>&le;<b>j<sub>2</sub></b>.</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+2 6
+1 1 2 -8 4 0
+1 1 -2 5 2 -4
+5
+1 1 2 2
+1 2 2 3
+1 1 1 6
+2 4 2 5
+1 1 2 6
+      </input>
+      <output>
+4
+2
+0
+7
+3
+      </output>
+    </example>
+  </examples>
+</problem>
