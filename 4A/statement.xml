@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="4A" type="standard">
+  <statement language="ru_RU">
+    <title>Двоичный поиск</title>
+    <input_format>
+      <p>В первой строке входных данных содержатся натуральные числа <b>N</b> и <b>K</b> (0&le;<b>N</b>,<b>K</b>&le;10<sup>5</sup>). Во второй строке задаются N элементов первого массива, отсортированного по возрастанию, а в третьей строке – K элементов второго массива. Элементы обоих массивов - целые числа, каждое из которых по модулю не превосходит 10<sup>9</sup>.</p>
+    </input_format>
+    <output_format>
+      <p>Требуется для каждого из K чисел вывести в отдельную строку <i>YES</i>, если это число встречается в первом массиве, и <i>NO</i> в противном случае.</p>
+    </output_format>
+    <notes><p>Источник: <a href="http://informatics.mccme.ru/moodle/mod/statements/view.php?id=192#1">Дистанционная подготовка: Двоичный поиск</a></p></notes>
+  </statement>
+  <examples>
+    <example>
+      <input>
+5 4
+1 4 5 8 9
+5 6 1 9
+      </input>
+      <output>
+YES
+NO
+YES
+YES
+      </output>
+    </example>
+  </examples>
+</problem>
