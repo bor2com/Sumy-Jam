@@ -10,7 +10,7 @@ int r, c;
 
 i64 tree[N * 4][N * 4], maj[N][N];
 
-i64 queryY(int yfrom, int yto, int from, int to, int vx, int vy) {
+i64 queryY(const int& yfrom, const int& yto, const int& from, const int& to, const int& vx, const int& vy) {
   if (yfrom < yto) {
     if (yfrom == from && yto == to) {
       return tree[vx][vy];
@@ -23,7 +23,7 @@ i64 queryY(int yfrom, int yto, int from, int to, int vx, int vy) {
   return 0;
 }
 
-i64 queryX(int xfrom, int xto, int yfrom, int yto, int from, int to, int vx) {
+i64 queryX(const int& xfrom, const int& xto, const int& yfrom, const int& yto, const int& from, const int& to, const int& vx) {
   if (xfrom < xto) {
     if (xfrom == from && xto == to) {
       return queryY(yfrom, yto, 0, c, vx, 1);
@@ -36,7 +36,7 @@ i64 queryX(int xfrom, int xto, int yfrom, int yto, int from, int to, int vx) {
   return 0;
 }
 
-void buildY(int xfrom, int xto, int yfrom, int yto, int vx, int vy) {
+void buildY(const int& xfrom, const int& xto, const int& yfrom, const int& yto, const int& vx, const int& vy) {
   if (yfrom + 1 == yto) {
     if (xfrom + 1 == xto) {
       tree[vx][vy] = maj[xfrom][yfrom]; // direct
@@ -51,7 +51,7 @@ void buildY(int xfrom, int xto, int yfrom, int yto, int vx, int vy) {
   }
 }
 
-void buildX(int from, int to, int vx) {
+void buildX(const int& from, const int& to, const int& vx) {
   if (from + 1 != to) {
     int mid = (from + to) / 2;
     buildX(from, mid, vx * 2);
@@ -61,7 +61,6 @@ void buildX(int from, int to, int vx) {
 }
 
 int main() {
-  i64 sum;
   int q, i, j, i1, j1, i2, j2;
   scanf("%d%d", &r, &c);
   for (i = 0; i < r; ++i) {

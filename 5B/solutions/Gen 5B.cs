@@ -83,6 +83,7 @@ public class Fffuuuu {
         Console.Write(rnd.Next((Int32)2e9 + 1) - (Int32)1e9);
       }
     }
+    Console.WriteLine(q);
     while (--q >= 0) {
       Console.WriteLine("1 1 {0} {1}", n, m);
     }
@@ -100,14 +101,27 @@ public class Fffuuuu {
   }
   
   void Tenth() {
-    Int32 n = 500, m = 500, q = 100000, i, j;
+    Int32 n = 500, m = 500, q = 100000, i, j, i1, i2, j1, j2;
     Console.WriteLine("{0} {1}", n, m);
     for (i = 0; i < n; ++i) {
       for (j = 0; j < m; Console.Write(++j == m ? Environment.NewLine : " ")) {
         Console.Write(-(Int32)1e9);
       }
     }
-    WriteRandomRectangles(q - 1, n, m);
+    Console.WriteLine(q);
+    while (--q > 0) {
+      i1 = rnd.Next(n) + 1;
+      i2 = rnd.Next(n) + 1;
+      j1 = rnd.Next(m) + 1;
+      j2 = rnd.Next(m) + 1;
+      if (i1 > i2) {
+        Swap(ref i1, ref i2);
+      }
+      if (j1 > j2) {
+        Swap(ref j1, ref j2);
+      }
+      Console.WriteLine("{0} {1} {2} {3}", i1, j1, i2, j2);
+    }
     Console.WriteLine("1 1 {0} {1}", n, m);
   }
 
