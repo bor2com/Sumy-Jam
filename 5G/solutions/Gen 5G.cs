@@ -21,7 +21,7 @@ public class Program {
   }
 
   void Sixth() {
-    Int32 n = 100000, k = 20000, i;
+    Int32 n = 10000, k = 1, i;
     Console.Write("{0} {1}", n, k);
     for (i = 0; i < n; ++i) {
       Console.Write(" 2 {0}", i + 1);
@@ -29,18 +29,18 @@ public class Program {
   }
 
   void Seventh() {
-    Int32 n = 100000, k = 1000, i;
+    Int32 n = rnd.Next(100000) + 1, k = 10, i;
     Console.Write("{0} {1}", n, k);
     for (i = 0; i < n; ++i) {
-      Console.Write(" {1} {0}", rnd.Next(1000) + 1, n - i);
+      Console.Write(" {1} {0}", rnd.Next(4) + 1, n - i);
     }
   }
 
   void Nineth() {
-    Int32 n = 150000, k = rnd.Next(10000) + 1, i;
+    Int32 n = 150000, k = rnd.Next(100) + 1, i;
     Console.Write("{0} {1}", n, k);
     for (i = 0; i < n; ++i) {
-      Console.Write(" {1} {0}", rnd.Next(1000) + 1, rnd.Next(1000) + 1);
+      Console.Write(" {1} {0}", 1, rnd.Next(1000) + 1);
     }
   }
 
