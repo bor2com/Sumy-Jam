@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem package="ru.ejudge.sample_contest" id="5J" type="standard">
+  <statement language="ru_RU">
+    <title>Клетки</title>
+    <description>
+      <p>После задачи 3H Даша и Дима не остановились. Они нарисовали на доске в сеточку <b>N</b> чёрных прямоугольников и попросили Борю посчитать общее количество закрашеных клеточек. Задача выглядит неподъёмной и Боря вынужден обратится к вам за помощью. Возможно вам поможет то, что все стороны прямоугольников паралельны осям координат.</p>
+    </description>
+    <input_format>
+      <p>В первой строке записано число <b>N</b> - количество прямоугольников (0&le;<b>N</b>&le;10<sup>5</sup>). Далее в <b>N</b> строках записано по 4 числа <b>X<sub>i</sub></b>, <b>Y<sub>i</sub></b>, <b>X<sub>j</sub></b> и <b>Y<sub>j</sub></b>  - координаты левого нижнего и правого верхнего углов прямоугольника (-10<sup>5</sup>&le;<b>X<sub>i</sub></b>&lt;<b>X<sub>j</sub></b>&le;10<sup>5</sup>; -10<sup>5</sup>&le;<b>Y<sub>i</sub></b>&lt;<b>Y<sub>j</sub></b>&le;10<sup>5</sup>). Каждый прямоугольник имеет положительную площадь.</p>
+    </input_format>
+    <output_format>
+      <p>Выведите одно целое число - общее количетсво закрашенных клеток.</p>
+    </output_format>
+  </statement>
+  <examples>
+    <example>
+      <input>
+3
+-1 -1 1 1
+0 0 2 2
+1 1 3 3
+      </input>
+      <output>10</output>
+    </example>
+    <example>
+      <input></input>
+      <output></output>
+    </example>
+    <example>
+      <input>3 1 3 2 2 3 1</input>
+      <output>0</output>
+    </example>
+  </examples>
+</problem>
